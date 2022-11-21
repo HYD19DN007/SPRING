@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="S" class="com.ioc.demo.classes.Square">
+	<constructor-arg>
+	<list>	<ref bean="pointA" />
+				<ref bean="pointB" />
+				<ref bean="pointC" />
+				<ref bean="pointD" />
+			</list>
+	
+	</constructor-arg>
+	<constructor-arg>
+			<set>
+				<value>10</value>
+				<value>11</value>
+				<value>12</value>
+				<value>13</value>
+			</set>
+	</constructor-arg>
+	
+<!-- 		<property name="list">
+			<list>
+				<ref bean="pointA" />
+				<ref bean="pointB" />
+				<ref bean="pointC" />
+				<ref bean="pointD" />
+			</list>
+		</property>
+		<property name="Nos">
+			<set>
+				<value>10</value>
+				<value>11</value>
+				<value>12</value>
+				<value>13</value>
+			</set>
+
+		</property>
+ -->
+ 
+ 
+ 	</bean>
+
+	<bean id="pointA" class="com.ioc.demo.classes.point">
+		<property name="X" value="0" />
+		<property name="Y" value="0" />
+	</bean>
+	<bean id="pointB" class="com.ioc.demo.classes.point">
+		<property name="X" value="0" />
+		<property name="Y" value="10" />
+	</bean>
+	<bean id="pointC" class="com.ioc.demo.classes.point">
+		<property name="X" value="10" />
+		<property name="Y" value="10" />
+
+	</bean>
+	<bean id="pointD" class="com.ioc.demo.classes.point">
+		<property name="X" value="10" />
+		<property name="Y" value="0" />
+	</bean>
+
+
+
+</beans>

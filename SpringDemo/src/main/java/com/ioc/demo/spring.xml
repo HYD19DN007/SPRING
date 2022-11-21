@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+
+
+  <bean id="T" class="com.ioc.demo.classes.Triangle"></bean> 
+  <bean id="T1" class="com.ioc.demo.classes.Triangle">
+  	<constructor-arg value="30"></constructor-arg>
+  	<constructor-arg value="40"></constructor-arg>
+  </bean>
+  <bean id="T2" class="com.ioc.demo.classes.Triangle">
+  	<constructor-arg value="100"></constructor-arg>
+  </bean>
+  
+  
+  <bean id="TS1" class="com.ioc.demo.classes.Triangle">
+	<property name="base" value="10000"/>
+	<property name="height" value="20000"/>
+   </bean>
+ <bean id="R" class="com.ioc.demo.classes.Rectangle">
+ 	<property name="pointA" ref="PA"/>
+ 	<property name="pointB" ref="PB"/>
+ 	<property name="pointC" ref="PC"/>
+ 	<property name="pointD" ref="PD"/>	
+ </bean>
+ 
+ 
+ <bean id="PA" class="com.ioc.demo.classes.point">
+ 	<property name="X" value="0"/>
+	<property name="Y" value="0"/>
+ </bean>
+ <bean id="PB" class="com.ioc.demo.classes.point">
+ 	<property name="X" value="0"/>
+	<property name="Y" value="10"/>
+ </bean>
+ <bean id="PC" class="com.ioc.demo.classes.point">
+ 	<property name="X" value="10"/>
+	<property name="Y" value="10"/>
+	
+ </bean>
+ <bean id="PD" class="com.ioc.demo.classes.point">
+ 	<property name="X" value="10"/>
+	<property name="Y" value="0"/>
+ </bean>
+ 
+ 
+  
+  
+ </beans>  
